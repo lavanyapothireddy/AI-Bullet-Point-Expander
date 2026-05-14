@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Bullet Point Expander</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">⬡ BulletAI</div>
+    <p class="tagline">Turn notes into narratives — instantly</p>
+  </header>
+
+  <main class="container">
+
+    <section class="input-panel">
+      <label class="field-label">YOUR BULLET POINTS</label>
+      <textarea
+        id="bulletInput"
+        placeholder="Paste your bullet points here, one per line:&#10;&#10;• AI is transforming healthcare&#10;• NLP helps doctors make better decisions&#10;• Early disease detection saves lives"
+        rows="7"
+      ></textarea>
+
+      <div class="controls-row">
+        <div class="control-group">
+          <label class="field-label" for="toneSelect">TONE</label>
+          <select id="toneSelect">
+            <option>Professional</option>
+            <option>Casual</option>
+            <option>Academic</option>
+            <option>Creative</option>
+            <option>Concise</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label class="field-label" for="lengthSelect">LENGTH</label>
+          <select id="lengthSelect">
+            <option value="short">Short (1–2 sentences)</option>
+            <option value="medium" selected>Medium (3–4 sentences)</option>
+            <option value="detailed">Detailed (5–7 sentences)</option>
+          </select>
+        </div>
+        <div class="control-group control-group--btn">
+          <button id="expandAllBtn" class="btn btn--primary">Expand All ↗</button>
+          <button id="resetBtn" class="btn btn--ghost">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultsSection" class="results-section hidden">
+      <div class="results-header">
+        <span id="resultsCount" class="badge"></span>
+      </div>
+      <div id="cardsList" class="cards-list"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">Powered by Groq · llama3-8b-8192</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
