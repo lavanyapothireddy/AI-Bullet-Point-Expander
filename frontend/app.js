@@ -1,5 +1,5 @@
 // ← Change this to your Render backend URL after deploying
-const API_BASE = "https://your-backend.onrender.com";
+const API_BASE = "https://ai-bullet-point-expander.onrender.com";
 
 const bulletInput = document.getElementById("bulletInput");
 const toneSelect  = document.getElementById("toneSelect");
